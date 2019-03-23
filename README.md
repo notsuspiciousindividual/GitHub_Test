@@ -2,7 +2,7 @@
 
 ## Encoding Try Outs
 
-1. T2pCRFJEOUhRR0pVSTBSbUp5WnRSa1JwT2tSQ1QzUlBaMEZVY1V0cFFqUlpSbU5CVTFwYw==
+1. e3VzZXJuYW1lOiJwb3RhdG9lIixmbGFnOiJOWVB7ZW5jb2Rpbmd9In0=
 2. =`8FW@;]LdAQ3SHDesT.9k@(6@q>
 
 ## Cryptography Try Outs
