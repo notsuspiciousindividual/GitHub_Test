@@ -10,6 +10,6 @@
 1. I step 2 steps to the right
 
    K ugzwcnna Kfgpvkha cu cp Cvvcem Jgnkeqrvgt. Gxgt ukpeg K ycu c dqa K ftgcogf qh uqctkpi qxgt vjg qknhkgnfu ftqrrkpi jqv uvkema nqcfu qp fkuiwuvkpi hqtgkipgtu. Rgqrng uca vq og vjcv c rgtuqp dgkpi c jgnkeqrvgt ku Korquukdng   
-2. I step 2 steps to the left
+2. This Vernam Cipher is pretty easy, it has a nice Key
 
-   G BGBL'R AFMMQC RFC BMLEJGDC, RFC BMLEJGDC AFMQC KC   
+   XCN{XMAOGGZLCB}   
