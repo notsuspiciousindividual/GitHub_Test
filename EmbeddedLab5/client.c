@@ -1,12 +1,11 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/types.h>
+#include <sys/socket.h>
 #include <unistd.h>
+#include <netdb.h>
 #include <time.h>
-#include <winsock2.h>
-#include <winsock.h>
 
 
 void error(char *m)
@@ -28,7 +27,7 @@ int main(int argc, char *argv[])
 	// empty socket: TCP IPv4 
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 	if (sockfd < 0)
-	       	error("ERROR opening socket");
+	    error("ERROR opening socket");
 	
 	server = gethostbyname(argv[1]);
 	if (server == NULL) 
@@ -38,17 +37,18 @@ int main(int argc, char *argv[])
 	memset((char *)&serv_addr, 0, sizeof(serv_addr));
 	
 	serv_addr.sin_family = AF_INET; // internet socket
-	memcpy((char *)server->h_addr,(char*)&serv_addr.sin_addr.s_addr,server->h_length);
+
+	bcopy((char *)server->h_addr ,(char*)&serv_addr.sin_addr.s_addr,server->h_length);
 	
 	serv_addr.sin_port = htons(port);
 	
-	if (connect(sockfd,(const struct sockaddr*) &serv_addr,sizeof(serv_addr)) < 0)
+	if (connect(sockfd,&serv_addr,sizeof(serv_addr)) < 0)
 		error("ERROR connecting");
 	
 //	printf("Please enter a number: ");
 //	fgets(buffer,255,stdin);
 	srand(time(0));
-	int r = (rand() % 100);
+	int r = (rand() % 100); //Give random Number
 	memset(buffer,0,256); 
 	sprintf(buffer, "%d", r);
 	printf("The number sent is: %s\n",buffer);
@@ -60,6 +60,6 @@ int main(int argc, char *argv[])
 	if (n < 0)
 		error("ERROR reading from socket");
 	
-	printf("%s\n",buffer);
+	printf("Received: %s\n",buffer);
 	return 0;
 }
